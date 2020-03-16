@@ -4,6 +4,7 @@ import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
 import { updateProfileRequest } from '../../store/modules/user/actions';
+import AvatarInput from './AvatarInput';
 
 import { Container } from './styles';
 
@@ -36,7 +37,8 @@ export default function Profile() {
 
   return (
     <Container>
-      <Form schema={schema} initialData={profile} onSubmit={handleSubmit}>
+      <Form initialData={profile} onSubmit={handleSubmit}>
+        <AvatarInput name="avatar_id" />
         <Input name="name" placeholder="Nome completo" />
         <Input name="email" type="email" placeholder="Seu endereço de e-mail" />
 
