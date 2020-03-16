@@ -4,6 +4,7 @@ import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
 import { updateProfileRequest } from '../../store/modules/user/actions';
+import { signOut } from '../../store/modules/auth/actions';
 import AvatarInput from './AvatarInput';
 
 import { Container } from './styles';
@@ -35,6 +36,10 @@ export default function Profile() {
     dispatch(updateProfileRequest(data));
   }
 
+  function handleLogout() {
+    dispatch(signOut());
+  }
+
   return (
     <Container>
       <Form initialData={profile} onSubmit={handleSubmit}>
@@ -57,7 +62,9 @@ export default function Profile() {
         />
         <button type="submit">Atualizar perfil</button>
       </Form>
-      <button type="button">Sair do GoBarber</button>
+      <button type="button" onClick={handleLogout}>
+        Sair do GoBarber
+      </button>
     </Container>
   );
 }
