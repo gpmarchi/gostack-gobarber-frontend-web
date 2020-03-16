@@ -10,17 +10,17 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     align-self: center;
-  }
 
-  button {
-    border: 0;
-    background: none;
-  }
+    button {
+      border: 0;
+      background: none;
+    }
 
-  strong {
-    color: #fff;
-    font-size: 24px;
-    margin: 0 15px;
+    strong {
+      color: #fff;
+      font-size: 24px;
+      margin: 0 15px;
+    }
   }
 
   ul {
