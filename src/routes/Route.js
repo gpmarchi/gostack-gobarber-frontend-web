@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { store } from '../store';
 
-import AuthLayout from '../pages/_layouts/auth';
+import AuthLayout from '~/pages/_layouts/auth';
 import DefaultLayout from '../pages/_layouts/default';
 
 export default function RouteWrapper({
